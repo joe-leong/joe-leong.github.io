@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>抽奖</title>
+</head>
+<body>
+
+	<button onclick="choujiang()">開始</button>
+	<script type="text/javascript">
+		var num = 1;
+		function choujiang(){
+			timer = setInterval(chou,10);
+			th = 0;
+		}
+		function chou(){
+			th = Math.random()*500;
+			console.log(th);
+			var zhong = Math.floor(th);
+			if (num == 1 && zhong == 300) {
+				num ++;
+				clearInterval(timer);
+				alert(zhong);
+			}else if(num == 2 && zhong == 400){
+				clearInterval(timer);
+				alert(zhong);
+				num ++;
+			}else if(num == 3 && zhong == 100){
+				clearInterval(timer);
+				alert(zhong);
+			}
+		}
+	</script>
+
+</body>
+</html>
