@@ -405,16 +405,17 @@ html,body{
 }
 .inner-con-sel{
 	position: absolute;
-	top: -4px;
+	top: -10px;
 	left: -11px;
 }
 .inner-con-sel ul li{
 	position: absolute;
-	width: 531px;
-	height: 522px;
+	width: 527px;
+	height: 517px;
 	float: left;
 	background-color: #fff;
 	display: none;
+	border: 2px solid #f40;
 }
 .wrapper .screen-box-wrap .main .main-inner .inner-con .pic-box{
 	position: relative;
