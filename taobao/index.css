@@ -401,7 +401,20 @@ html,body{
 	float: left;
 	margin-left: 10px;
 	margin-top: 10px;
-
+	position: relative;
+}
+.inner-con-sel{
+	position: absolute;
+	top: -4px;
+	left: -11px;
+}
+.inner-con-sel ul li{
+	position: absolute;
+	width: 531px;
+	height: 522px;
+	float: left;
+	background-color: #fff;
+	display: none;
 }
 .wrapper .screen-box-wrap .main .main-inner .inner-con .pic-box{
 	position: relative;
