@@ -26,8 +26,6 @@ $('.list li').mouseenter(function () {
 })
 
 // 二级菜单选项
-var on = false;
-var selOn = false;
 var sel = document.getElementsByClassName('inner-con-sel')[0];
 var selLis = sel.getElementsByTagName('li');
 var innerLeft = document.getElementById('inner-left-ul');
@@ -36,20 +34,23 @@ var lis = innerLeft.getElementsByTagName('li');
 
 for (var i = 0; i < lis.length; i++) {
 	(function (i) {
-		lis[i].onmouseenter = function () {
-			selLis[i].style.display = 'block';
-			// on = true
-		}
-		lis[i].onmouseleave = function () {
-				selLis[i].style.display = 'none'
-		}
-		selLis[i].onmouseenter = function(){
+		lis[i].onmouseenter = () => {
 			selLis[i].style.display = 'block'
 		}
-		selLis[i].onmouseleave = function () {
+		lis[i].onmouseleave = () =>{
+			selLis[i].style.display = 'none'
+		}
+		selLis[i].onmouseenter = () =>{
+			selLis[i].style.display = 'block'
+		}
+		selLis[i].onmouseleave = () =>{
 			selLis[i].style.display = 'none'
 		}
 
 	})(i)
 }
 
+// 取消所有 a标签的默认跳转事件
+$('a').click(()=>{
+	return false;
+})
